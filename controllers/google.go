@@ -64,7 +64,10 @@ func GoogleCallback(res http.ResponseWriter, req *http.Request) {
 		fmt.Println(err)
 	}
 
-	// Print the body
+	// Print the body to console
 	fmt.Println(string(body))
+
+	// Print body to browser
+	fmt.Fprintf(res, string(body))
 
 }
